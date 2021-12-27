@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+
+list_item_two = ['apples', 'oranges', 'pears', 'apricots']
+
+list_item_two.append("celery")
+
+print("ADD (1) or REMOVE (2) elements\n")
+
+user_input = input("> ")
+
+if user_input == "1":
+    print("Add Element to List")
+    special_val = "add"
+elif user_input == "2":
+    print("Remove Element to List")
+    special_val = "remove"
+
+i = 1
+while i < 4:
+    for fruit in list_item_two:
+      print(f"{i} fruit of type: {fruit}")
+      i += 1
+
+print("\nLength of elements: ", len(list_item_two))
+
+input_val = input(f"What element to {special_val}? ")
+
+list_item_two.remove(input_val)
+
+print("Now the list is: ", list_item_two)
