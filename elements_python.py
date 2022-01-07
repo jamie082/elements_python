@@ -24,11 +24,13 @@ while i < 4: # Output list
 
 print("\nLength of elements: ", len(list_item_two))
 
-input_val = input(f"What element to {special_val}? ")
+input_val = input(f"What element to {special_val}? ") # if add or remove
 
 # insert element
-list_item_two.insert(2, user_input)
+if special_val == "add":
+   list_item_two.append(input_val)
 
-list_item_two.remove(input_val) # this works
+elif special_val == "remove":
+   list_item_two.remove(input_val) # this works
 
 print("Now the list is: ", list_item_two)
